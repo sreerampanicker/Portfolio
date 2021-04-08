@@ -1,5 +1,4 @@
-/*Begin your code here*/
-/*Requirement 1*/
+
 body{
     font-family:'Garamond', sans-serif;;
     margin: 0;
@@ -10,27 +9,82 @@ body{
   .header{
     position: relative;
     text-align: center;
+    color: brown;
     font-size: 30px;
   
+  }
+  #logo h1{
+    color: brown;
+  }
+
+  #profile{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 10px;
+    width: 10px;
+  }
+
+  
+  #profile img{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 10px;
+    width: 10px;
+  }
+
+  .skip{
+    left:50%;
+    position: absolute;
+    top:-30px;
+    z-index:1
+  }
+
+  .skip:focus{
+    top:0px;
 
   }
 
-  /*Requirement 3*/
-  nav {
+  .active{
+    text-decoration: underline;
+    font-weight: bold;
+    font-size:18px;
     color: brown;
-    position:relative;
+  }
+  
+
+  #navi li{
+    color: brown;
     text-align: center;
     font-weight:bold;
-    font-size: 20px;
-    
-    
+    font-size: 5px;
+    padding: 5px 10px;
   }
 
-a:hover{
-  text-decoration: underline;
-  text-decoration-color: cadetblue;
+  nav a{
+    color:black;
+    text-align: center;
+    font-weight:bold;
+    font-size: 15px;
+  }
+
+
+#navi li a:hover{
+  font-weight: bold;
+  text-decoration:underline;
+  text-decoration-color: burlywood;
+}
+
+#navi li a:active{
+  font-weight: bold;
+  text-decoration:underline;
+  text-decoration-color: cornflowerblue;
+  font-size: 20px;
 
 }
+
+
 main{
   display: block;
   background-color:#FFFFFF;
@@ -96,16 +150,63 @@ footer{
   text-align: center;
   background-color: #FFFFFF;
 
-
+/* css for the brands*/
 }
 .Gallery{
   width:100%;
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows:auto;
+  grid-template-columns: 1fr;
+  grid-template-rows:auto auto auto auto auto auto auto auto auto;
+  grid-gap:10px;
 }
+
 div img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+
+@media (min-width: 600px){
+
+#navi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+.container{
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows:auto auto auto auto auto auto auto auto auto;
+  grid-gap:10px;
+}
+.Gallery{
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+}
+.Gallery:hover{
+  box-shadow: 0 0 5px 2px #add8e6;
+
+}
+
+.Gallery p{
+  color: brown;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+
+}
+
+img{
+  border: 1px dashed brown;
+  border-radius: 2px;
+  padding: 1px;
+  width: 300px;
+
+}
 }
